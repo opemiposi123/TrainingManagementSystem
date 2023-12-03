@@ -3,7 +3,7 @@ using TrainingManagementService.Enums;
 
 namespace TrainingManagementService.Entities
 {
-    public class Employee : IdentityUser
+    public class Employee : IdentityUser<Guid>
     {
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -13,5 +13,7 @@ namespace TrainingManagementService.Entities
         public string LastName { get; set; }
         public Gender Gender { get; set; }
         public string PhoneNumber { get; set; }
+        public string? ImageUrl { get; set; }
+        public bool IsActive { get; set; }
     }
 }
