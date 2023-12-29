@@ -13,9 +13,9 @@ namespace TrainingManagementService.Entities
         public AppraisalGap AppraisalGap { get; set; }
         public Specialization Specialization { get; set; }
         public TrainingPlatForm TrainingPlatForm { get; set; }
-        public Guid TrainingTypeId { get; set; }
+        public string TrainingTypeId { get; set; }
         public TrainingType TrainingType { get; set; }
-        public Guid TrainingVendorId { get; set; }
+        public string TrainingVendorId { get; set; }
         public TrainingVendor TrainingVendor { get; set; }
 
         

@@ -1,4 +1,23 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using TrainingManagementService.Context;
+using TrainingManagementService.Entities;
+using static ITHelpDesk.Domain.Entities.IdentityCustom;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<TMSDbContext>(options =>
+               options.UseSqlServer(builder.Configuration.GetConnectionString("TrainingManagementSystemConnection")));
+
+builder.Services.AddIdentity<Employee, Role>(opt =>
+{
+    opt.Password.RequiredLength = 7;
+    opt.Password.RequireDigit = false;
+    opt.Password.RequireUppercase = false;
+    opt.User.RequireUniqueEmail = true;
+})
+ .AddEntityFrameworkStores<TMSDbContext>()
+ .AddDefaultTokenProviders();
 
 // Add services to the container.
 

@@ -1,7 +1,7 @@
 ﻿namespace TrainingManagementService.Entities
 {
-    public class ISoftDelatable
+    public interface ISoftDeletable
     {
-        public bool IsDeleted { get; set; } = false;
+        public bool IsDeleted { get; set; } 
     }
 }

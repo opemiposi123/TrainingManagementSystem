@@ -8,7 +8,8 @@
         public string ImageUrl { get; set; } = default!;
         public string Website { get; set; } = default!;
         public int CountOfSpecialization { get; set; }
-        public Guid TrainingVendorSpecializationId { get; set; }
+
+        public string TrainingVendorSpecializationId { get; set; }
         public ICollection<TrainingVendorSpecialization> TrainingVendorSpecialization { get; set; } = new HashSet<TrainingVendorSpecialization>();
     }
 }

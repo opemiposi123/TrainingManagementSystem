@@ -1,4 +1,6 @@
-﻿namespace TrainingManagementService.Entities
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace TrainingManagementService.Entities
 {
     public class Department : BaseEntity
     {

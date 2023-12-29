@@ -1,6 +1,21 @@
-﻿namespace TrainingManagementService.Repositories.Service
+﻿using TrainingManagementService.Context;
+using TrainingManagementService.Repositories.Interface;
+
+namespace TrainingManagementService.Repositories.Service
 {
-    public class UnitOfWork
+    internal sealed class UnitOfWork : IUnitOfWork
     {
+        private readonly TMSDbContext _context;
+
+        public UnitOfWork(TMSDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        {
+            return await _context.SaveChangesAsync(cancellationToken);
+        }
+
     }
 }

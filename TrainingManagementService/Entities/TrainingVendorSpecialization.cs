@@ -1,7 +1,6 @@
 ﻿namespace TrainingManagementService.Entities
 {
-    public class TrainingVendorSpecialization
+    public class TrainingVendorSpecialization : BaseEntity
     {
-        public Guid TrainingVendor { get;set; }
     }
 }
