@@ -11,7 +11,6 @@ namespace TrainingManagementService.Implementation.Interface
         Task<ServiceResponse<IEnumerable<TrainingTypeDto>>> GetAllAsync(CancellationToken cancellationToken = default);
 
         Task<ServiceResponse<TrainingTypeDto>> GetByIdAsync(string trainingTypeId, CancellationToken cancellationToken = default);
-
         Task<ServiceResponse<string>> UpdateAsync(TrainingTypeDto trainingType, CancellationToken cancellationToken = default);
 
         Task<ServiceResponse<string>> DeleteAsync(string trainingTypeId, CancellationToken cancellationToken = default);

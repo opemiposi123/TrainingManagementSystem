@@ -4,9 +4,9 @@ namespace Persistence.Context.Shared;
 
 internal static class HttpExtension
 {
-    /// <summary>
-    /// Returns the request source in the form of a v4 IP address, or the machine name (if the request is from the local machine)
-    /// </summary>
+     //<summary>
+     //Returns the request source in the form of a v4 IP address, or the machine name (if the request is from the local machine)
+     //</summary>
     public static string GetRequestSource(this HttpContext? context)
     {
         var requestSource = context?.Connection.RemoteIpAddress?.MapToIPv4().ToString();

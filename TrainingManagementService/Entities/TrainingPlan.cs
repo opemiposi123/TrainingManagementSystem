@@ -5,10 +5,10 @@ namespace TrainingManagementService.Entities
     public class TrainingPlan : BaseEntity
     {
         public DateTime Date { get; set; } 
-        public string Description { get;set; } = default!;
+        public string Description { get;set; } 
         public  string Location { get; set; } = default!;
         public  string Platform { get; set; } = default!; 
-        public string CertificateOfCompletion { get; set; } = default!;
+        public string CertificateOfCompletion { get; set; } 
         public string ConnectionLink { get; set; } = default!;
         public AppraisalGap AppraisalGap { get; set; }
         public Specialization Specialization { get; set; }

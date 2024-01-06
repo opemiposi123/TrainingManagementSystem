@@ -20,12 +20,11 @@ namespace TrainingManagementService.Dtos
         public string Description { get; set; }
         public string? Attachment { get; set; }
         public TrainingStatus TrainingStatus { get; set; }
-        public Guid TrainingTypeId { get; set; }
-        public Guid TrainingVendorSpecializtionId { get; set; }
-        public Guid TrainingVendorId { get; set; }
-        public Guid EmployeeTrainingRequestId { get; set; }
-        public Guid? ApprovingEmployeeId { get; set; }
-
+        public string TrainingTypeId { get; set; }
+        public string TrainingVendorSpecializationId { get; set; }
+        public string TrainingVendorId { get; set; }
+        public string EmployeeTrainingRequestId { get; set; }
+        public string? ApprovingEmployeeId { get; set; }
         public EmployeeTrainingRequest EmployeeTrainingRequest { get; set; }
         public TrainingVendor TrainingVendor { get; set; }
         public TrainingVendorSpecialization TrainingVendorSpecializtion { get; set; }

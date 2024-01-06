@@ -1,4 +1,5 @@
-﻿using TrainingManagementService.Enums;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using TrainingManagementService.Enums;
 
 namespace TrainingManagementService.Entities
 {
@@ -14,6 +15,7 @@ namespace TrainingManagementService.Entities
         public Department Department { get; set; }
         public DateTime RequestedDate { get; set; } = DateTime.Now;
         public string Duration { get; set; } = default!;
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Budget { get; set; } 
         public ApprovalStatus ApprovalStatus { get; set; }
     }
